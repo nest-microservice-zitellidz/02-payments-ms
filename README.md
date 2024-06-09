@@ -29,45 +29,57 @@
 ## Installation
 
 ```bash
-$ npm install
+
+#### Clonar el repositorio
+git clone
+
+#### Instalar dependencias
+npm install
+
+#### Crear un archivo .env basado en el 'env.template'
+cp env.template .env
+
+#### Migración de prisma
+npx prisma migrate dev
+
+#### Ejecutar
+npm run start:dev
+
 ```
 
-## Running the app
+## Comandos Instalacion
 
 ```bash
-# development
-$ npm run start
+nest new project-name
+npm run start:dev
 
-# watch mode
-$ npm run start:dev
+nest g res products --no-spec
+Rest Api - Y
 
-# production mode
-$ npm run start:prod
+npm i class-validator class-transformer
+npm i --save nats
+npm i dotenv joi 
+npm i @nestjs/config
+npm install prisma --save-dev
+npx prisma init
+
+// terminar de crear el modelo
+
+npx prisma migrate dev --name init
+
+app.useGlobalPipes( 
+ new ValidationPipe({ 
+ whitelist: true, 
+ forbidNonWhitelisted: true, 
+ }) 
+);
+
+
+npm i --save @nestjs/microservices
+
+docker compose up -d
+
+npm install stripe --save
+ 
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+ 
